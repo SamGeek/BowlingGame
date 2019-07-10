@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:focusableInTouchMode="true"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:paddingBottom="8dp">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:padding="5dp"
+            android:id="@+id/close_dialog"
+            android:layout_alignParentRight="true"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            app:srcCompat="@drawable/close"/>
+
+
+        <RelativeLayout
+            android:layout_below="@+id/close_dialog"
+            android:id="@+id/relativeMainContainer"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_marginTop="10dp"
+                android:id="@+id/inviteEditCommission"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:gravity="center_horizontal"
+                android:layout_height="wrap_content"
+                android:text="Please add a Frame result"
+                android:textSize="20sp"/>
+
+            <RadioGroup
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:layout_below="@+id/inviteEditCommission"
+                android:id="@+id/frameTypeRG"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                    <RadioButton
+                        android:checked="true"
+                        android:id="@+id/normalRadio"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Normal Frame"/>
+
+                    <RadioButton
+                        android:id="@+id/lastRadio"
+                        android:padding="10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Last Frame"/>
+
+
+            </RadioGroup>
+
+
+
+            <LinearLayout
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/frameTypeRG"
+                android:orientation="vertical">
+
+                <LinearLayout
+                        android:background="@drawable/round_red_background"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textAllCaps="true"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="First Try"/>
+
+                    <Spinner
+                            android:gravity="right"
+                            android:id="@+id/firstTrySpinner"
+                            android:entries="@array/results"
+                            android:minHeight="60dp"
+                            android:minWidth="150dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:background="@drawable/round_red_background"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textAllCaps="true"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Scnd Try"/>
+
+                    <Spinner
+                            android:gravity="right"
+                            android:id="@+id/secondTrySpinner"
+                            android:entries="@array/results"
+                            android:minHeight="60dp"
+                            android:minWidth="150dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                        android:visibility="gone"
+                        android:id="@+id/thirdContainer"
+                        android:background="@drawable/round_red_background"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="20dp"
+                            android:textColor="@color/colorPrimary"
+                            android:textAllCaps="true"
+                            android:textSize="12sp"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="THIRD Try"/>
+
+                    <Spinner
+                            android:gravity="right"
+                            android:id="@+id/thirdTrySpinner"
+                            android:entries="@array/results"
+                            android:minHeight="60dp"
+                            android:minWidth="150dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/relativeMainContainer"
+            android:id="@+id/btn_validate"
+            android:layout_marginLeft="60dp"
+            android:layout_width="match_parent"
+            android:minHeight="60dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="ADD"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+</LinearLayout>
